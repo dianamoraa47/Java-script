@@ -1,0 +1,46 @@
+fruits={"kiwi":150.00,"apple":60,"peach":60.00,"grapes":200.00}
+
+{kiwi: 150, apple: 60, peach: 60, grapes: 200}
+
+
+var quantity = 2;
+undefined
+
+
+function
+
+calculateFruitCost(item,quantity)
+
+{fruits={"kiwi":150.00,"apple":60,"peach":60.00,"grapes":200.00};
+
+var price=fruits[fruits]*quantity;
+
+console.log(quantity+" "+ fruits +" for KES "+price);}
+
+
+undefined
+
+
+
+calculateFruitsCost("kiwi",2);
+
+
+                                                                       VM1760:5
+2 kiwi for KES 300.00
+
+undefined
+
+
+
+calculateFruitsCost("grapes",2);
+
+ 2 grapes for KES 400.00
+undefined
+
+                                                                      VM1760:2 bucket for KES 400.00
+
+
+calculateFruitsCost("apple",2);                                           
+VM1760:5
+2 apple for KES 120.00
+undefined

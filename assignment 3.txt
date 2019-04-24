@@ -1,0 +1,8 @@
+Declaration : var m =2 is a declared keyword that allocates a variable in the corresponding scope.
+
+
+Definition : when you define a var name () it is when you assign a specific value to the variable.
+
+
+Intialization: var name = {first:"Moraa"} intialization allocates the variable.
+variable is a place holder or a container
