@@ -1,0 +1,13 @@
+fruit_list =
+  ["apple","kiwi"];
+function printFruits(fruit_list)
+
+{
+  console.log(fruit_list);
+}
+["apple","kiwi"];
+var fruit_index = prompt("from fruit_list pick 0-1");
+console.log(fruit_list[fruit_index]);
+function getFruit
+(fruit_list,fruit_index)
+{alert(fruit_list[fruit_index]);}
