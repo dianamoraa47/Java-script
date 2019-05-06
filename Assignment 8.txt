@@ -1,0 +1,21 @@
+let person = { 
+ name: "Diana",
+ age:23,
+ isstudent: "absent"
+ 
+ };
+alert(person.name,person.isstudent)
+ 
+
+let ask = (question, yes, no) =>{
+ 
+ if (confirm(question,yes, no)) yes()
+ 
+ else no();
+}
+ask(
+"Do you agree?",
+() => {console.log("You agreed");},
+() => {console.log("You cancelled the execution");}
+);
+
