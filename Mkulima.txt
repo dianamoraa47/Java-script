@@ -1,0 +1,171 @@
+class Mkulima {
+  
+  constructor() {
+    this.farms = [];
+    this.vendors = [];
+    this.products = [];
+    this.orders = [];
+  }
+addFarm(farmId, name, farmer, phone, address){
+  let farm = {
+    Id:farmId, 
+    name:name, 
+    farmer:farmer, 
+    phone:phone,
+    address:address
+  }
+  this.farms.push(farm);
+}
+ removeFarm(farmId){
+   let farmers = this.getFarm(farmId);
+   let index = this.farms.indexof(farms)
+   this.farms.splice(index,1)
+ } 
+  updateFarm(farmId, name, farmer, phone, address){
+    let farms = {
+      Id:farmId,
+      name:name,
+      farmer:farmer,
+      address:address
+      
+    }
+    this.farms.push(farms);
+  } 
+  getFarm(farmId){
+    for(var i=0;i<this.farms.length; i++){
+     let farm =this.farm[i];
+      if(farm.farmid===farmid);
+      {
+        return (farm);
+      }
+    }
+  }
+ addVendor(vendorId, name, phone) {
+    let vendor = {
+     Id:vendorId, 
+      name:name, 
+      phone:phone};
+    this.vendors.push(vendor); 
+  }
+
+  getVendor(vendorId) {
+    for (var i=0; i<this.vendors.length; i++) {
+      let vendor = this.vendors[i];
+      if (vendor.vendorId ===vendorId) {
+        return (vendor);
+      }
+    }
+  }
+  removeVendor(vendorId) {
+    let vendor = this.getVendor(vendorId);
+    let Index = this.vendors.indexOf(vendor);
+    this.vendors.splice(Index, 1);
+ }
+   updateVendor( vendorId, name, phone) {
+   let vendor = this.getVendor(vendorId);
+   let Index = this.vendors.indexOf(vendor);
+   this.farms[Index] = {
+     Id:vendorId, 
+     name:name, 
+     phone:phone,}
+   
+    
+  }
+  addProduct(productId, name, price) {
+    let product = {
+                   Id:productId,
+                   name:name,
+                   price:price};
+    this.products.push(product);
+  }
+  
+  getProduct(productId) {
+    for (var i=0; i<this.products.length; i++) {
+      let product = this.products[i];
+      if (product.product.Id ===productId){
+        return product;
+      }
+    }
+  }
+  
+  removeProduct(productId) {
+    let product = this.getProduct(productId);
+    let Index = this.products.indexOf(product);
+    this.products.splice(Index, 245);
+  }
+  
+  updateProduct( productId, name, price) {
+   let product = this.getProduct(productId);
+   let myIndex = this.products.indexOf(product);
+   this.products[myIndex] = {
+     Id:productId, 
+     name:name, 
+     price:price
+   }
+  }
+  
+}
+// printProducts(){
+  
+// }
+// calculateOrderCost(productId, quantity){
+  
+// }
+  var maize=new Mkulima();
+maize.addFarm(404,"Jua","Kinoti","0746237427",9078);
+maize.addFarm(404,"Sama","Naruto","0772456785",8709);
+
+console.log(maize.farms);
+
+// var far = new Mkulima();
+// far.removeFarm(401,"Moon","Jeruto","0744567876",5679);
+// console.log(far.farms);
+
+var peel = new Mkulima();
+peel.updateFarm(235,"wow","Leo","073234543",57832);
+peel.updateFarm(234,"Aries","April");
+console.log(peel.farms)
+
+var lil = new Mkulima();
+lil.getFarm(38,"Leon","Siri","074765667",4589);
+console.log(lil.farm)
+
+ var maz=new Mkulima();
+maz.addVendor(400,"winter","quinter","0746237427",207);
+maz.addVendor(400,"Sammer","ruto","0772456785",709);
+console.log(maz.vendors);
+
+var lar = new Mkulima();
+lar.removeVendor(565,577);
+console.log(lar.vendors);
+
+var pen = new Mkulima();
+pen.updateVendor(25,"wow","Scorpio","073234543",32);
+pen.updateVendor(34,"Scope","May");
+console.log(pen.vendors)
+
+var lilo = new Mkulima();
+lilo.getVendor(213,"maure","Linet","0743763454",278);
+console.log(lilo.vendor)
+
+var mazzo=new Mkulima();
+maz.addProduct(500,"Autumn","Cleo","0746237427",207);
+maz.addProduct(210,"Thunder","Lola","0772456785",709);
+maz.addProduct(100,"Tula","Wola","077244565",609);
+console.log(maz.products);
+
+var larra = new Mkulima();
+lar.removeProduct(100,"Tula","Wola","077244565",609);
+console.log(lar.products);
+
+var penal = new Mkulima();
+pen.updateProduct(45,"Fog","Maud","073234543",56);
+pen.updateProduct(24,"Hop","Lenny");
+console.log(pen.products)
+
+var lio = new Mkulima();
+lio.getProduct(113,"Jus","Laurent","0743763454",88);
+console.log(lio.product)
+
+
+
