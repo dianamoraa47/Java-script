@@ -1,0 +1,23 @@
+var body =document.body
+body.style.backgroundColor = "silver"
+
+
+var h1 =document.getElementById("title");
+h1.style.color = "green"
+
+var h3 =document.getElementById("cat");
+h3.style.textTransform ="uppercase";
+
+
+var h3 =document.getElementById("dog");
+h3.style.textTransform ="uppercase";
+
+var fruitList = document.createElement("li")
+fruitList.innerHTML="Kiwi";
+fruList.appendChild(fruitList);
+
+var veggie = document.createElement("li");
+veggie.innerHTML="Cauliflower";
+vegList.appendChild(veggie);
+
+
