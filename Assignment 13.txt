@@ -1,0 +1,35 @@
+
+const setColor=()=>{
+  const titleColor = document.getElementById("title");
+  titleColor.style.color=
+  titleColor.style.color==="green"?"silver":"green";
+  
+}
+setInterval(setColor,1000);
+
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+function myFunction() {
+  var node = document.createElement("LI");
+  var textnode = document.createTextNode("Cauliflower");
+  node.appendChild(textnode);
+  document.getElementById("fruList").appendChild(node);
+  document.getElementById("vegList").appendChild(node);
+}
+
+var body =document.body
+ body.style.backgroundColor = "grey"
+
+
