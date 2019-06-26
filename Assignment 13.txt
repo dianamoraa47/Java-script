@@ -20,6 +20,49 @@ for (i = 0; i < coll.length; i++) {
       content.style.display = "block";
     }
   });
+
+
+
+
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Greens Kiosk</title>
+  
+</head>
+<body>
+  <h1 id="title">Welcome to Greens Kiosk</h1>
+  <p>We sell fruits and vegetables</p>
+  <h3 id ="cat">Fruits</h3>
+  
+<button class="collapsible">Open Fruits</button> 
+  <div class="content">
+  <ul id="fruList", >
+  <button onclick="myFunction()">SUBMIT FRUIT</button>
+
+    <li>Mangoes</li>
+    <li>Bananas</li>
+    <li>Water Melons</li>
+  </ul>
+  </div>
+  <div class="content">
+  <h3 >Vegetables</h3>
+    
+<button class="collapsible">Open Vegetables</button>
+  <ul id="vegList">
+    <button onclick="myFunction()">ENTER</button>
+    
+
+    <li>Onions</li>
+    <li>Tomatoes</li>
+    <li>Kales</li>
+  </ul>
+    </div>
+</body>
+</html>
+
+
 }
 function myFunction() {
   var node = document.createElement("LI");
