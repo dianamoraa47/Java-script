@@ -1,40 +1,83 @@
 <!DOCTYPE HTML>
 <html>
+
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Greens Kiosk</title>
-  
+   
+   <title>Greens Kiosk</title> 
+   
 </head>
+
 <body>
-  <h1 id="title">Welcome to Greens Kiosk</h1>
-  <p>We sell fruits and vegetables</p>
-  <h3 id ="cat">Fruits</h3>
+   <h1 id="title">Welcome to Greens Kiosk</h1>
+   <p>We sell fruits and vegetables</p>
+   <h2>Products</h2>
+   <ul id="products">
+        <script type = "text/javascript">
+            fetch("http://localhost:5000/products")
+              .then(response => response.json())
+              .then(response => {
+                  response.forEach(item =>{
+                      var products = document.getElementById("products")
+                      var lists = document.createElement("li")
+                      var textnode = document.createTextNode(item.name)
+                      lists.appendChild(textnode);
+                      products.append(lists);
+                      
+                  
+              })
+        })
+       </script>       
+   </ul>
+   
+       <!-- Show products list from API -->
   
-<button class="collapsible">Open Fruits</button> 
-  <div class="content">
-  <ul id="fruList", >
-  <button onclick="myFunction()">SUBMIT FRUIT</button>
+  
+      </ul>
+   <h3>Fruits</h3>
+   <ul id="fruList">
+       <script type = "text/javascript">
+           fetch("http://localhost:5000/products/fruits")
+            .then(response => response.json())
+            .then (response => {
+                response.forEach(item =>{
+                      var fruit = document.getElementById("fruList")
+                      var fruList = document.createElement("li")
+                      var textnode = document.createTextNode(item.name)
+                      fruList.appendChild(textnode);
+                      fruit.append(fruList);
+        })
+        })
+        </script>
 
-    <li>Mangoes</li>
-    <li>Bananas</li>
-    <li>Water Melons</li>
-  </ul>
-  </div>
-  <div class="content">
-  <h3 >Vegetables</h3>
-    
-<button class="collapsible">Open Vegetables</button>
+
+
+
+       <!-- Show fruits from API -->
+   
+   </ul>
+  <h3>Vegetables</h3>
   <ul id="vegList">
-    <button onclick="myFunction()">ENTER</button>
-    
+  <script type = "text/javascript">
+    fetch("http://localhost:5000/products/vegetables")
+     .then(response => response.json())
+     .then (response => {
+         response.forEach(item =>{
+               var vegetables = document.getElementById("vegList")
+               var vegList= document.createElement("li")
+               var textnode = document.createTextNode(item.name)
+               vegList.appendChild(textnode);
+               vegetables.append(vegList);
+    })
+    })
+    </script>
 
-    <li>Onions</li>
-    <li>Tomatoes</li>
-    <li>Kales</li>
-  </ul>
-    </div>
+
+
+
+
+
+       <!-- Show vegetables from API -->
+   </ul>
 </body>
+
 </html>
-
-
-}
